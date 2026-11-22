@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+
+<!-- Mirrored from https://banger-site-v7-3.vercel.app/carte by HTTrack Website Copier/3.x [XR&CO], Sun, 22 Nov 2026 17:21:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>La carte — BANGER</title>
+</head>
+<body>
+<div class="noise"></div>
+<header class="site-header">
+  <a class="brand brand-logo" href="index.html" aria-label="Accueil BANGER"><img src="assets/logo-banger.png" alt="BANGER"></a>
+  <nav class="desktop-nav"><a href="concept">Concept</a><a href="carte" aria-current="page">La carte</a><a href="franchise">Franchise</a></nav>
+  <a class="pill pill-small" target="_blank" rel="noreferrer" href="https://www.ubereats.com/fr/store/banger/QmKdcxdpXiG3UM4ic0lPdQ">Commander</a>
+</header>
+<main class="inner-page single-menu-page">
+  <section class="page-hero menu-page-hero menu-photo-hero">
+    <p class="eyebrow">La carte</p>
+    <h1>DÉCOUVREZ<br><span>LA CARTE BANGER.</span></h1>
+    <p>Tacos gratinés, roulés gratinés, Riz Crousty, gratins et petites faims : découvrez tout l’univers BANGER.</p>
+  </section>
+
+  <nav class="menu-anchor-nav menu-anchor-clean" aria-label="Catégories de la carte">
+    <a href="#crousty">Riz Crousty</a>
+    <a href="#composer">À composer</a>
+    <a href="#signatures">Signatures</a>
+    <a href="#gratins">Gratins</a>
+    <a href="#frites">Frites</a>
+    <a href="#petites-faims">Petites faims</a>
+    <a href="#enfant">Menu enfant</a>
+    <a href="#desserts">Desserts</a>
+  </nav>
+
+  <section class="menu-category section" id="crousty">
+    <header class="menu-category-heading reveal"><p class="eyebrow dark">BANGER — LA CARTE</p><h2>RIZ CROUSTY</h2><p>Du riz, du poulet croustillant et notre sauce maison.</p></header>
+    <div class="menu-products-grid menu-products-three">
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/riz-crousty-original.webp" alt="Riz Crousty Original"></div><div class="menu-product-copy"><h3>Riz Crousty Original</h3><p>Riz blanc, sauce blanche maison, oignons frits, persil, filet de poulet pané et sauce au choix.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/riz-crousty-gratine.webp" alt="Riz Crousty Gratiné"></div><div class="menu-product-copy"><h3>Riz Crousty Gratiné</h3><p>Riz blanc, sauce blanche maison, oignons frits, persil, filet de poulet pané, sauce et gratinage au choix.</p></div></article>
+    </div>
+  </section>
+
+  <section class="menu-category section" id="composer">
+    <header class="menu-category-heading reveal"><p class="eyebrow dark">100 % PERSONNALISABLE</p><h2>À COMPOSER</h2><p>Choisis ta viande, tes sauces, tes crudités et ton gratinage.</p></header>
+    <div class="menu-products-grid menu-products-three">
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/tacos-gratine.webp" alt="Tacos gratiné"></div><div class="menu-product-copy"><h3>Tacos gratiné</h3><p>1 galette, frites, sauce fromagère maison, viande, crudités, sauces et gratinage au choix.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/maxi-tacos-gratine.webp" alt="Maxi tacos gratiné"></div><div class="menu-product-copy"><h3>Maxi tacos gratiné</h3><p>2 galettes, 2 viandes, frites, sauce fromagère maison, crudités, sauces et gratinage au choix.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/roule-gratine.webp" alt="Roulé gratiné"></div><div class="menu-product-copy"><h3>Roulé gratiné</h3><p>1 galette, une touche de frites, sauce fromagère maison, viande, crudités, sauces et gratinage au choix.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/gratin-personnalisable.webp" alt="Le Gratin personnalisable"></div><div class="menu-product-copy"><h3>Le Gratin</h3><p>Frites, sauce fromagère maison, une viande, crudités, sauces et gratinage au choix.</p></div></article>
+    </div>
+  </section>
+
+  <section class="menu-category section" id="signatures">
+    <header class="menu-category-heading reveal"><p class="eyebrow dark">LES INCONTOURNABLES</p><h2>TACOS & ROULÉS SIGNATURES</h2><p>Nos recettes les plus gourmandes, pensées et gratinées par BANGER.</p></header>
+    <div class="menu-products-grid menu-products-three">
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/oriental.webp" alt="L'Oriental"></div><div class="menu-product-copy"><h3>L’Oriental</h3><p>Viande hachée, chakchouka, œuf, frites, sauce fromagère maison, mozzarella, merguez, poivrons et olives.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/savoyard.webp" alt="Le Savoyard"></div><div class="menu-product-copy"><h3>Le Savoyard</h3><p>Cordon bleu, oignons frits, frites, sauce fromagère maison, raclette et lardinettes.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/honey.webp" alt="Le Honey"></div><div class="menu-product-copy"><h3>Le Honey</h3><p>Escalope, frites, sauce fromagère maison, gratiné chèvre miel et copeaux de noix.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/red-chicken.webp" alt="Red Chicken"></div><div class="menu-product-copy"><h3>Red Chicken</h3><p>Poulet tandoori, oignons caramélisés, frites, sauce fromagère maison, mozzarella et cheddar.</p></div></article>
+    </div>
+  </section>
+
+  <section class="menu-category section" id="gratins">
+    <header class="menu-category-heading reveal"><p class="eyebrow dark">ULTRA GOURMAND</p><h2>GRATINS SIGNATURES</h2><p>Une base généreuse de frites et de sauce fromagère, gratinée selon chaque recette.</p></header>
+    <div class="menu-products-grid menu-products-three">
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/gratin-4-fromages.webp" alt="Gratin 4 Fromages"></div><div class="menu-product-copy"><h3>4 Fromages</h3><p>Frites, sauce fromagère maison, mozzarella, chèvre, raclette et emmental.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/gratin-dz.webp" alt="Gratin DZ"></div><div class="menu-product-copy"><h3>DZ</h3><p>Frites, sauce fromagère maison, viande hachée, mozzarella, poivrons, merguez et sauce algérienne.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/gratin-montagnard.webp" alt="Gratin Montagnard"></div><div class="menu-product-copy"><h3>Montagnard</h3><p>Frites, sauce fromagère maison, cordon bleu, mozzarella, raclette et lardinettes.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/gratin-chicken-bbq.webp" alt="Gratin Chicken BBQ"></div><div class="menu-product-copy"><h3>Chicken BBQ</h3><p>Frites, sauce fromagère maison, tenders croustillants, oignons frits et sauce barbecue.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/gratin-bombay.webp" alt="Gratin Bombay"></div><div class="menu-product-copy"><h3>Bombay</h3><p>Frites, sauce fromagère maison, oignons, poulet tandoori, mozzarella et cheddar.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/gratin-boursin.webp" alt="Gratin Boursin"></div><div class="menu-product-copy"><h3>Boursin</h3><p>Frites, sauce fromagère maison, poulet curry, mozzarella et Boursin.</p></div></article>
+    </div>
+  </section>
+
+
+  <section class="menu-category section" id="frites">
+    <header class="menu-category-heading reveal"><p class="eyebrow dark">CROUSTILLANTES & GÉNÉREUSES</p><h2>FRITES</h2><p>Des frites seules ou nappées de nos sauces gourmandes.</p></header>
+    <div class="menu-products-grid menu-products-three">
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/frites-classiques.webp" alt="Frites classiques"></div><div class="menu-product-copy"><h3>Frites classiques</h3><p>Une portion de frites croustillantes et dorées.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/frites-fromagere.webp" alt="Frites fromagère"></div><div class="menu-product-copy"><h3>Frites fromagère</h3><p>Frites croustillantes nappées de notre sauce fromagère maison.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/frites-cheddar.webp" alt="Frites cheddar"></div><div class="menu-product-copy"><h3>Frites cheddar</h3><p>Frites croustillantes recouvertes de cheddar fondant.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/frites-cheddar-bacon.webp" alt="Frites cheddar bacon"></div><div class="menu-product-copy"><h3>Frites cheddar bacon</h3><p>Frites croustillantes, cheddar fondant et lardinettes.</p></div></article>
+    </div>
+  </section>
+
+  <section class="menu-category section" id="petites-faims">
+    <header class="menu-category-heading reveal"><p class="eyebrow dark">À PARTAGER… OU PAS</p><h2>PETITES FAIMS</h2><p>Des bouchées croustillantes pour accompagner ton BANGER.</p></header>
+    <div class="menu-products-grid menu-products-three">
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/tenders.webp" alt="Tenders"></div><div class="menu-product-copy"><h3>Tenders</h3><p>Filets de poulet panés, croustillants à l’extérieur et tendres à cœur.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/wings.webp" alt="Wings"></div><div class="menu-product-copy"><h3>Wings</h3><p>Ailes de poulet croustillantes, servies avec une sauce au choix.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/nuggets.webp" alt="Nuggets"></div><div class="menu-product-copy"><h3>Nuggets</h3><p>Bouchées de poulet panées, dorées et croustillantes.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/jalapenos.webp" alt="Jalapeños"></div><div class="menu-product-copy"><h3>Jalapeños</h3><p>Bouchées panées au fromage et au piment jalapeño.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/sticks-mozza.webp" alt="Sticks mozzarella"></div><div class="menu-product-copy"><h3>Sticks mozzarella</h3><p>Bâtonnets de mozzarella fondante dans une panure croustillante.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/bouchees-camembert.webp" alt="Bouchées camembert"></div><div class="menu-product-copy"><h3>Bouchées camembert</h3><p>Petites bouchées panées au cœur fondant de camembert.</p></div></article>
+    </div>
+  </section>
+
+  <section class="menu-category section" id="enfant">
+    <header class="menu-category-heading reveal"><p class="eyebrow dark">POUR LES PETITS BANGERS</p><h2>MENU ENFANT</h2><p>Une formule simple, gourmande et adaptée aux enfants.</p></header>
+    <div class="menu-products-grid menu-products-three">
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/menu-enfant-nuggets.webp" alt="Menu enfant nuggets"></div><div class="menu-product-copy"><h3>Menu enfant nuggets</h3><p>4 nuggets croustillants, accompagnés de frites, d’un Capri-Sun et d’une compote.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/menu-enfant-mini-tacos.webp" alt="Menu enfant mini tacos"></div><div class="menu-product-copy"><h3>Menu enfant mini tacos</h3><p>Un mini tacos, accompagné de frites, d’un Capri-Sun et d’une compote.</p></div></article>
+    </div>
+  </section>
+
+  <section class="menu-category section" id="desserts">
+    <header class="menu-category-heading reveal"><p class="eyebrow dark">FINIR EN BEAUTÉ</p><h2>DESSERTS</h2><p>La touche sucrée qui termine le repas comme il faut.</p></header>
+    <div class="menu-products-grid menu-products-three">
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/tiramisu-speculoos.webp" alt="Tiramisu Spéculoos"></div><div class="menu-product-copy"><h3>Tiramisu Spéculoos</h3><p>Crème onctueuse et biscuits Spéculoos.</p></div></article>
+      <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/tiramisu-oreo.webp" alt="Tiramisu Oreo"></div><div class="menu-product-copy"><h3>Tiramisu Oreo</h3><p>Crème onctueuse et éclats de biscuits Oreo.</p></div></article>
+    </div>
+  </section>
+
+  <section class="order section"><h2>FAIM ?</h2><p>Retrouve la carte complète, les prix et la commande en ligne sur Uber Eats.</p><div><a class="pill pill-black" target="_blank" rel="noreferrer" href="https://www.ubereats.com/fr/store/banger/QmKdcxdpXiG3UM4ic0lPdQ">Commander sur Uber Eats</a></div></section>
+</main>
+<footer class="site-footer"><a class="footer-wordmark" href="index.html" aria-label="Accueil BANGER">BANGER<span>©</span></a><div><a href="concept">Concept</a><a href="carte">La carte</a><a href="franchise">Franchise</a></div><small>BANGER © 2026</small></footer>
+<script src="script.js"></script>
+</body>
+
+<!-- Mirrored from https://banger-site-v7-3.vercel.app/carte by HTTrack Website Copier/3.x [XR&CO], Sun, 22 Nov 2026 17:21:43 GMT -->
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+
+<!-- Mirrored from https://banger-site-v7-3.vercel.app/concept by HTTrack Website Copier/3.x [XR&CO], Sun, 22 Nov 2026 17:21:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Le concept — BANGER</title>
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand brand-logo" href="index.html" aria-label="Accueil BANGER"><img src="assets/logo-banger.png" alt="BANGER"></a>
+    <nav class="desktop-nav"><a href="concept">Concept</a><a href="carte">La carte</a><a href="franchise">Franchise</a></nav>
+    <a class="pill pill-small" target="_blank" rel="noreferrer" href="https://www.ubereats.com/fr/store/banger/QmKdcxdpXiG3UM4ic0lPdQ">Commander</a>
+  </header>
+
+  <main class="concept-page">
+    <section class="concept-hero">
+      <div class="concept-hero-copy reveal">
+        <p class="eyebrow">NOTRE CONCEPT</p>
+        <h1>LE SPÉCIALISTE<br><span>DU GRATINAGE.</span></h1>
+        <p>Inspiré de la cuisine lyonnaise, BANGER revisite les grands classiques avec une spécialité qui fait toute la différence : le gratinage.</p>
+      </div>
+      <div class="concept-hero-products reveal delay-1" aria-label="Produits emblématiques BANGER">
+        <img src="assets/home-tacos.png" alt="Tacos gratiné BANGER">
+        <img src="assets/home-roule.png" alt="Roulé gratiné BANGER">
+        <img src="assets/home-gratin.png" alt="Gratin BANGER">
+      </div>
+    </section>
+
+    <section class="concept-manifesto section">
+      <div class="section-label">Notre savoir-faire</div>
+      <div class="manifesto-grid">
+        <h2 class="reveal">UNE FINITION<br>QUI FAIT<br><span>NOTRE SIGNATURE.</span></h2>
+        <div class="manifesto-copy reveal delay-1">
+          <p>Tacos gratinés, roulés gratinés, gratins ultra gourmands et Riz Crousty… chaque recette est pensée pour offrir une expérience généreuse, avec une finition au fromage qui fait notre signature.</p>
+          <p>Aujourd'hui, BANGER, c'est une carte variée, des recettes originales et un seul objectif : <strong>vous faire vivre une expérience qui sort de l'ordinaire.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="history section">
+      <div class="history-heading reveal">
+        <p class="eyebrow">Notre histoire</p>
+        <h2>L'HISTOIRE DE BANGER</h2>
+        <p>Une rencontre, des idées, des essais et une ambition qui ne cesse de grandir.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item timeline-left reveal">
+          <div class="timeline-visual timeline-visual-graphic"><span>2023</span><strong>LA RENCONTRE</strong></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-copy"><span class="timeline-date">2023</span><h3>LA RENCONTRE</h3><p>Tout commence avec la rencontre de plusieurs passionnés. Certains possèdent une solide expérience dans la restauration rapide, d'autres viennent du marketing et de la communication. Une vision commune naît : créer une enseigne différente, capable de marquer les esprits autant par son identité que par ses recettes.</p></div>
+        </article>
+
+        <article class="timeline-item timeline-right reveal">
+          <div class="timeline-copy"><span class="timeline-date">DÉBUT 2024</span><h3>LA CRÉATION</h3><p>Pendant plusieurs mois, nous imaginons, testons et perfectionnons nos recettes. Nous développons nos sauces, nos gratinages et nos signatures, tout en recherchant le lieu idéal pour accueillir notre premier restaurant.</p></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-visual timeline-products"><img src="assets/products/tacos-gratine.webp" alt="Essai de tacos gratiné"><img src="assets/products/riz-crousty-gratine.webp" alt="Essai de Riz Crousty gratiné"></div>
+        </article>
+
+        <article class="timeline-item timeline-left reveal">
+          <div class="timeline-visual timeline-photo"><img src="assets/restaurant-original.jpg" alt="Premier restaurant BANGER à Chambéry"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-copy"><span class="timeline-date">NOVEMBRE 2024</span><h3>LA PREMIÈRE OUVERTURE</h3><p>Après plusieurs mois de travail, BANGER ouvre son premier restaurant à Chambéry. Notre ambition est claire : faire découvrir un concept moderne et généreux autour de notre spécialité, le gratinage. Ce n'est que le début de l'aventure.</p></div>
+        </article>
+
+        <article class="timeline-item timeline-right reveal">
+          <div class="timeline-copy"><span class="timeline-date">2025</span><h3>L'ÉVOLUTION</h3><p>Au fil des mois, la communauté BANGER grandit. Nous enrichissons notre carte, développons nos recettes signatures et renforçons notre identité. Chaque retour client nous pousse à faire mieux, encore et encore.</p></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-visual timeline-photo"><img src="assets/evolution-2025.png" alt="Équipe BANGER préparant un tacos en cuisine"></div>
+        </article>
+
+        <article class="timeline-item timeline-left reveal">
+          <div class="timeline-visual timeline-france">
+            <svg viewBox="0 0 520 560" role="img" aria-label="Carte de France avec Chambéry">
+              <path d="M417.2 183.6L433.9 192.9L485 199.4L467.1 223.7L462.6 249L452.8 255L436.7 251.8L437.8 260.8L411.9 280.7L411.4 296.8L428.3 291.2L440.5 306.8L439 316.8L449.5 330.1L437.2 340.9L446.3 368.3L465.5 372.8L461.5 388.2L429.3 408.2L359.4 398.6L307.8 410.2L303.7 431.5L262.6 436.1L222.7 420.1L209.8 427.7L144.5 411.6L130.4 397.8L148.7 376.6L155.5 305.9L118.9 268.7L92.8 250.8L38.6 237.1L35 211.3L81 203.6L140.5 212.7L129.3 172.6L162.7 187.8L245.3 160.1L255.9 131.1L287 123.9L292.1 136.4L308.6 137L325.1 151.2L349.8 167.9L368 165.1L406.9 184.4Z"/>
+              <path d="M429 445C442 454 446 472 440 490C435 508 426 526 417 522C409 518 407 501 410 484C413 466 418 451 429 445Z"/>
+            </svg>
+            <span class="timeline-pin">B</span>
+          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-copy"><span class="timeline-date">2026</span><h3>UNE NOUVELLE ÉTAPE</h3><p>Après plus d'un an de développement, de travail et de passion, BANGER ouvre officiellement son concept à la franchise. Notre ambition : devenir la référence du gratinage partout en France.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="next-chapter">
+      <p class="eyebrow dark">2027…</p>
+      <h2>LE PROCHAIN<br>CHAPITRE.</h2>
+      <p>Et si c'était avec vous ?</p>
+      <a class="pill pill-black" href="franchise">Devenir franchisé →</a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-wordmark" href="index.html" aria-label="Accueil BANGER">BANGER<span>©</span></a><div><a href="concept">Concept</a><a href="carte">La carte</a><a href="franchise">Franchise</a></div><small>BANGER © 2026</small></footer>
+  <script src="script.js"></script>
+</body>
+
+<!-- Mirrored from https://banger-site-v7-3.vercel.app/concept by HTTrack Website Copier/3.x [XR&CO], Sun, 22 Nov 2026 17:21:34 GMT -->
+</html>
