@@ -12,15 +12,30 @@
   <link rel="stylesheet" href="styles.css">
   <title>La carte — BANGER</title>
 </head>
-<body>
+<body class="banger-menu-refresh">
 <div class="noise"></div>
 <header class="site-header">
   <a class="brand brand-logo" href="index.html" aria-label="Accueil BANGER"><img src="assets/logo-banger.png" alt="BANGER"></a>
   <nav class="desktop-nav"><a href="concept.html">Concept</a><a href="carte.html" aria-current="page">La carte</a><a href="franchise.html">Franchise</a></nav>
   <a class="pill pill-small" target="_blank" rel="noreferrer" href="https://www.ubereats.com/fr/store/banger/QmKdcxdpXiG3UM4ic0lPdQ">Commander</a>
+
+  <button class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="mobile-navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-navigation" aria-label="Navigation mobile" inert>
+    <a href="index.html">Accueil</a>
+    <a href="concept.html">Concept</a>
+    <a href="carte.html">La carte</a>
+    <a href="franchise.html">Franchise</a>
+    <a class="mobile-order-link" href="https://www.ubereats.com/fr/store/banger/QmKdcxdpXiG3UM4ic0lPdQ" target="_blank" rel="noopener noreferrer">Commander</a>
+  </nav>
 </header>
+  <aside class="banger-floating-social" aria-label="Suivre BANGER et commander"><a href="https://www.instagram.com/bangeroriginal/" aria-label="Instagram BANGER" title="Instagram @bangeroriginal" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.8" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@bangeroriginal" aria-label="TikTok BANGER" title="TikTok @bangeroriginal" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 2c.25 2.35 1.57 3.84 4 4.1v3.4a9.3 9.3 0 0 1-4-1.06v6.21c0 4.2-3.05 7.35-7.1 7.35A7.12 7.12 0 0 1 2.5 14.9c0-3.9 3.1-7.1 7.05-7.1.47 0 .94.05 1.42.16v3.53a3.5 3.5 0 0 0-1.42-.3c-2.04 0-3.65 1.63-3.65 3.7 0 2.08 1.6 3.67 3.63 3.67 2 0 3.58-1.52 3.58-3.66V2h3.5Z"/></svg></a><a class="banger-floating-order" href="https://www.ubereats.com/fr/store/banger/QmKdcxdpXiG3UM4ic0lPdQ" aria-label="Commander chez BANGER" title="Commander sur Uber Eats" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14l-1 14H6L5 7Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg></a></aside>
 <main class="inner-page single-menu-page">
+  <div class="fun-page-strip" aria-hidden="true"><div><span>FAIM DE BANGER ?</span><b>✳</b><span>100% BANGER</span><b>✳</b><span>FAIM DE BANGER ?</span><b>✳</b><span>100% BANGER</span><b>✳</b><span>FAIM DE BANGER ?</span><b>✳</b><span>100% BANGER</span><b>✳</b><span>FAIM DE BANGER ?</span><b>✳</b><span>100% BANGER</span><b>✳</b><span>FAIM DE BANGER ?</span><b>✳</b><span>100% BANGER</span><b>✳</b></div></div>
   <section class="page-hero menu-page-hero menu-photo-hero">
+    <div class="banger-inner-stamp banger-menu-stamp" aria-hidden="true">FAIM<br>DE<br>BANGER ?</div>
     <p class="eyebrow">La carte</p>
     <h1>DÉCOUVREZ<br><span>LA CARTE BANGER.</span></h1>
     <p>Tacos gratinés, roulés gratinés, Riz Crousty, gratins et petites faims : découvrez tout l’univers BANGER.</p>
@@ -38,6 +53,7 @@
   </nav>
 
   <section class="menu-category section" id="crousty">
+    <div class="banger-menu-spark" aria-hidden="true">✳</div>
     <header class="menu-category-heading reveal"><p class="eyebrow dark">BANGER — LA CARTE</p><h2>RIZ CROUSTY</h2><p>Du riz, du poulet croustillant et notre sauce maison.</p></header>
     <div class="menu-products-grid menu-products-three">
       <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/riz-crousty-original.webp" alt="Riz Crousty Original"></div><div class="menu-product-copy"><h3>Riz Crousty Original</h3><p>Riz blanc, sauce blanche maison, oignons frits, persil, filet de poulet pané et sauce au choix.</p></div></article>
@@ -46,6 +62,7 @@
   </section>
 
   <section class="menu-category section" id="composer">
+    <div class="banger-menu-spark" aria-hidden="true">✳</div>
     <header class="menu-category-heading reveal"><p class="eyebrow dark">100 % PERSONNALISABLE</p><h2>À COMPOSER</h2><p>Choisis ta viande, tes sauces, tes crudités et ton gratinage.</p></header>
     <div class="menu-products-grid menu-products-three">
       <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/tacos-gratine.webp" alt="Tacos gratiné"></div><div class="menu-product-copy"><h3>Tacos gratiné</h3><p>1 galette, frites, sauce fromagère maison, viande, crudités, sauces et gratinage au choix.</p></div></article>
@@ -56,6 +73,7 @@
   </section>
 
   <section class="menu-category section" id="signatures">
+    <div class="banger-menu-spark" aria-hidden="true">✳</div>
     <header class="menu-category-heading reveal"><p class="eyebrow dark">LES INCONTOURNABLES</p><h2>TACOS & ROULÉS SIGNATURES</h2><p>Nos recettes les plus gourmandes, pensées et gratinées par BANGER.</p></header>
     <div class="menu-products-grid menu-products-three">
       <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/oriental.webp" alt="L'Oriental"></div><div class="menu-product-copy"><h3>L’Oriental</h3><p>Viande hachée, chakchouka, œuf, frites, sauce fromagère maison, mozzarella, merguez, poivrons et olives.</p></div></article>
@@ -66,6 +84,7 @@
   </section>
 
   <section class="menu-category section" id="gratins">
+    <div class="banger-menu-spark" aria-hidden="true">✳</div>
     <header class="menu-category-heading reveal"><p class="eyebrow dark">ULTRA GOURMAND</p><h2>GRATINS SIGNATURES</h2><p>Une base généreuse de frites et de sauce fromagère, gratinée selon chaque recette.</p></header>
     <div class="menu-products-grid menu-products-three">
       <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/gratin-4-fromages.webp" alt="Gratin 4 Fromages"></div><div class="menu-product-copy"><h3>4 Fromages</h3><p>Frites, sauce fromagère maison, mozzarella, chèvre, raclette et emmental.</p></div></article>
@@ -79,6 +98,7 @@
 
 
   <section class="menu-category section" id="frites">
+    <div class="banger-menu-spark" aria-hidden="true">✳</div>
     <header class="menu-category-heading reveal"><p class="eyebrow dark">CROUSTILLANTES & GÉNÉREUSES</p><h2>FRITES</h2><p>Des frites seules ou nappées de nos sauces gourmandes.</p></header>
     <div class="menu-products-grid menu-products-three">
       <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/frites-classiques.webp" alt="Frites classiques"></div><div class="menu-product-copy"><h3>Frites classiques</h3><p>Une portion de frites croustillantes et dorées.</p></div></article>
@@ -89,6 +109,7 @@
   </section>
 
   <section class="menu-category section" id="petites-faims">
+    <div class="banger-menu-spark" aria-hidden="true">✳</div>
     <header class="menu-category-heading reveal"><p class="eyebrow dark">À PARTAGER… OU PAS</p><h2>PETITES FAIMS</h2><p>Des bouchées croustillantes pour accompagner ton BANGER.</p></header>
     <div class="menu-products-grid menu-products-three">
       <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/tenders.webp" alt="Tenders"></div><div class="menu-product-copy"><h3>Tenders</h3><p>Filets de poulet panés, croustillants à l’extérieur et tendres à cœur.</p></div></article>
@@ -101,6 +122,7 @@
   </section>
 
   <section class="menu-category section" id="enfant">
+    <div class="banger-menu-spark" aria-hidden="true">✳</div>
     <header class="menu-category-heading reveal"><p class="eyebrow dark">POUR LES PETITS BANGERS</p><h2>MENU ENFANT</h2><p>Une formule simple, gourmande et adaptée aux enfants.</p></header>
     <div class="menu-products-grid menu-products-three">
       <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/menu-enfant-nuggets.webp" alt="Menu enfant nuggets"></div><div class="menu-product-copy"><h3>Menu enfant nuggets</h3><p>4 nuggets croustillants, accompagnés de frites, d’un Capri-Sun et d’une compote.</p></div></article>
@@ -109,6 +131,7 @@
   </section>
 
   <section class="menu-category section" id="desserts">
+    <div class="banger-menu-spark" aria-hidden="true">✳</div>
     <header class="menu-category-heading reveal"><p class="eyebrow dark">FINIR EN BEAUTÉ</p><h2>DESSERTS</h2><p>La touche sucrée qui termine le repas comme il faut.</p></header>
     <div class="menu-products-grid menu-products-three">
       <article class="menu-product reveal"><div class="menu-product-image"><img src="assets/products/tiramisu-speculoos.webp" alt="Tiramisu Spéculoos"></div><div class="menu-product-copy"><h3>Tiramisu Spéculoos</h3><p>Crème onctueuse et biscuits Spéculoos.</p></div></article>
@@ -118,7 +141,7 @@
 
   <section class="order section"><h2>FAIM ?</h2><p>Retrouve la carte complète, les prix et la commande en ligne sur Uber Eats.</p><div><a class="pill pill-black" target="_blank" rel="noreferrer" href="https://www.ubereats.com/fr/store/banger/QmKdcxdpXiG3UM4ic0lPdQ">Commander sur Uber Eats</a></div></section>
 </main>
-<footer class="site-footer"><a class="footer-wordmark" href="index.html" aria-label="Accueil BANGER">BANGER<span>©</span></a><div><a href="concept.html">Concept</a><a href="carte.html">La carte</a><a href="franchise.html">Franchise</a></div><small>BANGER © 2026</small></footer>
+<footer class="site-footer"><a class="footer-wordmark" href="index.html" aria-label="Accueil BANGER">BANGER<span>©</span></a><div><a href="concept.html">Concept</a><a href="carte.html">La carte</a><a href="franchise.html">Franchise</a></div><small>BANGER © 2026</small><div class="banger-footer-social" aria-label="Réseaux sociaux BANGER"><span>SUIS-NOUS <strong>@bangeroriginal</strong></span><a href="https://www.instagram.com/bangeroriginal/" aria-label="Instagram BANGER : bangeroriginal" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.8" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a><a href="https://www.tiktok.com/@bangeroriginal" aria-label="TikTok BANGER : bangeroriginal" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 2c.25 2.35 1.57 3.84 4 4.1v3.4a9.3 9.3 0 0 1-4-1.06v6.21c0 4.2-3.05 7.35-7.1 7.35A7.12 7.12 0 0 1 2.5 14.9c0-3.9 3.1-7.1 7.05-7.1.47 0 .94.05 1.42.16v3.53a3.5 3.5 0 0 0-1.42-.3c-2.04 0-3.65 1.63-3.65 3.7 0 2.08 1.6 3.67 3.63 3.67 2 0 3.58-1.52 3.58-3.66V2h3.5Z"/></svg><span>TikTok</span></a></div></footer>
 <script src="script.js"></script>
 </body>
 

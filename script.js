@@ -84,3 +84,40 @@ if (siteHeader) {
   updateHeader();
   window.addEventListener('scroll', updateHeader, { passive: true });
 }
+
+
+// Navigation mobile BANGER
+(() => {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const menu = document.querySelector('.mobile-nav');
+  const backdrop = document.querySelector('.mobile-menu-backdrop');
+  if (!toggle || !menu || !backdrop) return;
+
+  const closeMenu = () => {
+    document.body.classList.remove('mobile-menu-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Ouvrir le menu');
+    menu.setAttribute('inert', '');
+  };
+  const openMenu = () => {
+    document.body.classList.add('mobile-menu-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Fermer le menu');
+    menu.removeAttribute('inert');
+  };
+  toggle.addEventListener('click', () =>
+    document.body.classList.contains('mobile-menu-open') ? closeMenu() : openMenu()
+  );
+  backdrop.addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMenu();
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeMenu();
+  });
+  const here = location.pathname.split('/').pop() || 'index.html';
+  menu.querySelectorAll('a').forEach(link => {
+    if (link.getAttribute('href') === here) link.setAttribute('aria-current', 'page');
+  });
+})();

@@ -472,3 +472,601 @@
 .menu-photo-hero>p:last-child{color:#fff;max-width:760px}
 @keyframes menuHeroZoom{from{transform:scale(1)}to{transform:scale(1.045)}}
 @media(max-width:700px){.menu-photo-hero{background-position:center 30%}.menu-photo-hero:before{background:rgba(0,0,0,.6)}}
+
+
+/* BANGER V7.3 — menu mobile accessible */
+.mobile-menu-toggle,.mobile-nav,.mobile-menu-backdrop{display:none}
+@media(max-width:900px){
+  .site-header{z-index:100}
+  .site-header>.pill-small{display:none}
+  .mobile-menu-toggle{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+    margin-left:auto;width:48px;height:48px;padding:10px;border:1px solid rgba(255,255,255,.45);
+    border-radius:12px;background:rgba(16,16,16,.68);color:#fff;cursor:pointer;
+    position:relative;z-index:103;flex-shrink:0
+  }
+  .mobile-menu-toggle span{
+    width:25px;height:2.5px;display:block;border-radius:4px;background:currentColor;
+    transition:transform .2s ease,opacity .2s ease
+  }
+  .mobile-menu-backdrop{
+    display:block;position:fixed;inset:0;background:rgba(0,0,0,.72);
+    opacity:0;visibility:hidden;pointer-events:none;z-index:101;
+    transition:opacity .25s ease,visibility .25s ease
+  }
+  .mobile-nav{
+    display:flex;position:fixed;top:0;right:0;width:min(86vw,370px);
+    height:100vh;height:100dvh;box-sizing:border-box;
+    padding:100px 30px 36px;flex-direction:column;align-items:stretch;gap:8px;
+    overflow-y:auto;background:#101010;color:#fff;z-index:102;
+    transform:translateX(105%);visibility:hidden;pointer-events:none;
+    transition:transform .28s ease,visibility .28s ease;box-shadow:-14px 0 44px rgba(0,0,0,.25)
+  }
+  .mobile-nav a{
+    display:block;padding:16px 8px;border-bottom:1px solid rgba(255,255,255,.16);
+    font-size:22px;line-height:1.25;font-family:Anton,Impact,sans-serif;letter-spacing:.4px;
+    text-transform:uppercase;color:#fff;text-decoration:none
+  }
+  .mobile-nav a[aria-current="page"]{color:#f7d504}
+  .mobile-nav a.mobile-order-link{
+    text-align:center;background:#f7d504;color:#101010;border:0;
+    border-radius:100px;margin-top:25px;padding:16px 20px;font-size:19px
+  }
+  body.mobile-menu-open{overflow:hidden}
+  body.mobile-menu-open .mobile-menu-backdrop{opacity:1;visibility:visible;pointer-events:auto}
+  body.mobile-menu-open .mobile-nav{transform:translateX(0);visibility:visible;pointer-events:auto}
+  body.mobile-menu-open .mobile-menu-toggle span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+  body.mobile-menu-open .mobile-menu-toggle span:nth-child(2){opacity:0}
+  body.mobile-menu-open .mobile-menu-toggle span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+}
+@media(min-width:901px){body.mobile-menu-open{overflow:auto}}
+@media(prefers-reduced-motion:reduce){
+ .mobile-menu-toggle span,.mobile-nav,.mobile-menu-backdrop{transition:none}
+}
+
+/* Logo BANGER bien visible dans l'en-tête mobile */
+@media (max-width:900px){
+  .site-header .brand-logo{display:flex !important;visibility:visible !important;opacity:1 !important;position:relative;z-index:103;width:clamp(118px,34vw,165px);height:54px;min-width:0;flex:0 0 auto;align-items:center;justify-content:flex-start;margin-right:auto}
+  .site-header .brand-logo img{display:block !important;visibility:visible !important;opacity:1 !important;width:100%;height:auto;max-height:54px;object-fit:contain;object-position:left center}
+  .site-header .mobile-menu-toggle{margin-left:auto}
+}
+
+
+/* BANGER V7.3 — ajustements mobile logo et bannière (23 novembre 2026) */
+@media (max-width: 900px) {
+  .site-header {
+    height: 74px;
+    padding: 0 14px;
+    background: rgba(16,16,16,.94);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  .site-header .brand-logo {
+    display: flex !important;
+    width: clamp(150px, 46vw, 205px) !important;
+    min-width: 0;
+    height: 65px !important;
+    flex: 0 1 auto;
+    align-items: center;
+    margin-right: 10px;
+    overflow: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .site-header .brand-logo img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 65px !important;
+    object-fit: contain;
+    object-position: left center;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .site-header .mobile-menu-toggle {
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+  }
+  /* Afficher toute la composition d'origine : plus de recadrage object-fit:cover. */
+  .home-banner {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 74px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    overflow: hidden;
+    background: #101010;
+  }
+  .home-banner > img {
+    position: relative !important;
+    inset: auto !important;
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center center;
+  }
+  .home-banner-shade { display: none !important; }
+  .home-banner-actions {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 14px 18px;
+    background: #101010;
+  }
+  .home-banner-actions .pill {
+    flex: 1 1 130px;
+    min-width: 0;
+    width: auto !important;
+    max-width: 250px;
+    padding: 14px 12px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+@media (max-width: 360px) {
+  .site-header {padding: 0 10px;}
+  .site-header .brand-logo {width: 145px !important;}
+}
+
+
+/* BANGER — mise en page street-food originale 2026.
+   Portée sur l'accueil exclusivement. Aucun élément du contenu supprimé. */
+.banger-home-refresh{--banger-ink:#16140f;--banger-sun:#f7d504}
+.banger-home-refresh .concept,.banger-home-refresh .home-products,.banger-home-refresh .restaurant,.banger-home-refresh .order{position:relative;isolation:isolate}
+.banger-home-refresh .concept{overflow:hidden;padding-top:clamp(90px,10vw,145px);padding-bottom:clamp(100px,11vw,160px);background:radial-gradient(circle at 100% 10%,rgba(255,255,255,.25) 0 5%,transparent 5.1%),var(--yellow)}
+.banger-home-refresh .concept::before{content:"";position:absolute;width:330px;height:330px;right:-130px;bottom:-150px;border:24px solid #151515;border-radius:50%;opacity:.08;z-index:-1}
+.banger-home-refresh .concept .section-label,.banger-home-refresh .home-products .section-label{display:inline-flex;align-items:center;gap:8px;padding:9px 17px;border:2px solid #151515;border-radius:60px;font-size:12px;font-weight:900;letter-spacing:1px;background:#fff5b4;transform:rotate(-2deg)}
+.banger-home-refresh .concept h2{line-height:.88;letter-spacing:-.025em;position:relative;z-index:1}
+.banger-home-refresh .concept-copy{position:relative;max-width:590px;padding:30px 28px 32px;background:#fff7d8;border:3px solid #141414;box-shadow:12px 12px 0 #141414;transform:rotate(1deg)}
+.banger-home-refresh .concept-copy .text-link{display:inline-flex;margin-top:13px;border-bottom:3px solid #111;font-weight:900}
+.banger-deco-concept{position:absolute;top:80px;right:7vw;width:118px;height:118px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;background:#111;color:#f7d504;border:4px dashed #f7d504;box-shadow:0 0 0 5px #111;transform:rotate(13deg);font:900 34px/1 Anton,Impact,sans-serif;z-index:2;pointer-events:none}
+.banger-deco-concept small{font:900 12px/1.2 Inter,Arial,sans-serif;letter-spacing:1px}
+.banger-side-note{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:2px dashed #111;padding:0 0 13px;margin-bottom:22px;font:900 12px Inter,Arial,sans-serif;letter-spacing:1.1px}
+.banger-side-note span{font-size:26px;line-height:1}
+.banger-home-refresh .home-products{padding-top:clamp(70px,8vw,125px);padding-bottom:clamp(95px,10vw,155px);background-color:#f6f1df;background-image:radial-gradient(#18181810 1px,transparent 1px);background-size:22px 22px}
+.banger-section-eyebrow{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 26px;border-bottom:2px solid #141414;padding-bottom:15px;color:#111;font:900 clamp(11px,1.2vw,15px)/1.3 Inter,Arial,sans-serif;letter-spacing:1.1px}
+.banger-home-refresh .home-products .section-label{background:#f7d504;transform:rotate(2deg)}
+.banger-home-refresh .home-products-heading{grid-template-columns:minmax(0,1.5fr) minmax(240px,.5fr);gap:35px;align-items:end;margin:24px 0 45px}
+.banger-home-refresh .home-products-heading h2{font-size:clamp(60px,8.5vw,126px);letter-spacing:-.02em;line-height:.88}
+.banger-home-refresh .home-products-heading h2 span{color:#f7d504;-webkit-text-stroke:1.5px #111;text-shadow:4px 4px 0 #111}
+.banger-home-refresh .home-products-heading>p:last-child{max-width:350px;padding:20px 0 0 19px;border-left:5px solid #f7d504;font-weight:700}
+.banger-products-wrap{position:relative}
+.banger-home-refresh .home-products-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
+.banger-home-refresh .home-products-grid .menu-product{border:3px solid #111;border-radius:13px 13px 3px 3px;overflow:hidden;box-shadow:8px 9px 0 #111;transition:transform .2s ease,box-shadow .2s ease;background:#fff;grid-template-rows:clamp(220px,22vw,360px) auto}
+.banger-home-refresh .home-products-grid .menu-product:nth-child(1){transform:rotate(-1.8deg)}
+.banger-home-refresh .home-products-grid .menu-product:nth-child(2){transform:translateY(15px) rotate(1.2deg)}
+.banger-home-refresh .home-products-grid .menu-product:nth-child(3){transform:rotate(-1deg)}
+.banger-home-refresh .home-products-grid .menu-product:hover{transform:translateY(-8px) rotate(0);box-shadow:12px 15px 0 #111}
+.banger-home-refresh .home-products-grid .menu-product-image{background:#f7d504}
+.banger-home-refresh .home-products-grid .menu-product-copy{padding:23px 23px 29px}
+.banger-home-refresh .home-products-grid .menu-product-copy h3{font-size:clamp(23px,2.4vw,33px)}
+.banger-sticker-products{position:absolute;right:-30px;top:-62px;width:115px;height:115px;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#f7d504;color:#111;border:3px solid #111;clip-path:polygon(50% 0%,61% 11%,78% 5%,83% 22%,100% 29%,92% 45%,100% 61%,83% 70%,82% 88%,65% 87%,50% 100%,37% 87%,18% 91%,17% 73%,0% 63%,9% 46%,0% 30%,18% 23%,20% 7%,39% 12%);font:900 18px/1.02 Anton,Impact,sans-serif;transform:rotate(14deg);text-align:center;z-index:3;pointer-events:none}
+.banger-sticker-products span{font-size:22px;line-height:.8}
+.banger-home-refresh .home-products-cta{margin-top:75px}
+.banger-home-refresh .home-products-cta .pill{border:2px solid #111;box-shadow:6px 6px 0 #f7d504;padding:19px 30px}
+.banger-home-refresh .restaurant{padding-top:70px;background:#111;overflow:hidden}
+.banger-on-dark{color:#f7d504;border-color:#f7d504;margin-left:var(--pad);margin-right:var(--pad)}
+.banger-home-refresh .restaurant-panel{position:relative;max-width:1500px;margin:0 auto;box-shadow:0 0 0 2px #111}
+.banger-spot-stamp{position:absolute;top:-27px;left:46%;z-index:5;background:#fff7d8;color:#111;border:3px solid #111;box-shadow:5px 5px 0 #111;padding:14px 18px;font:900 19px/.98 Anton,Impact,sans-serif;transform:rotate(-8deg);pointer-events:none}
+.banger-spot-stamp span{color:#de1b23;font-size:24px}
+.banger-home-refresh .restaurant-info{position:relative}
+.banger-home-refresh .restaurant-info::after{content:"✳";position:absolute;right:30px;bottom:35px;color:#111;opacity:.15;font-size:96px;line-height:1;pointer-events:none}
+.banger-home-refresh .order{overflow:hidden;padding-top:clamp(85px,10vw,145px);padding-bottom:clamp(85px,9vw,130px);background:repeating-linear-gradient(-30deg,transparent 0 46px,rgba(0,0,0,.035) 46px 49px),var(--yellow)}
+.banger-home-refresh .order h2{position:relative;z-index:1;letter-spacing:-.025em}
+.banger-order-star{position:absolute;right:clamp(-40px,3vw,50px);top:20px;font-size:clamp(130px,22vw,320px);line-height:1;color:#fff4be;text-shadow:5px 5px 0 #111;transform:rotate(18deg);opacity:.8;pointer-events:none}
+.banger-home-refresh .order p,.banger-home-refresh .order>div:not(.banger-order-star){position:relative;z-index:2}
+@media(max-width:1100px){.banger-home-refresh .home-products-heading{grid-template-columns:1fr}.banger-home-refresh .home-products-heading>p:last-child{max-width:600px}.banger-deco-concept{right:20px;top:25px;width:94px;height:94px;font-size:27px}.banger-deco-concept small{font-size:10px}}
+@media(max-width:800px){
+ .banger-home-refresh .concept{padding-top:80px;padding-bottom:95px}
+ .banger-home-refresh .concept-grid{display:grid;grid-template-columns:1fr;gap:40px}
+ .banger-home-refresh .concept h2{font-size:clamp(52px,12vw,92px)}
+ .banger-home-refresh .concept-copy{transform:none;box-shadow:7px 8px 0 #111;padding:24px}
+ .banger-deco-concept{top:32px;right:24px;width:77px;height:77px;font-size:22px;border-width:2px;box-shadow:0 0 0 3px #111}
+ .banger-deco-concept small{font-size:8px}
+ .banger-home-refresh .home-products{padding-top:70px;padding-bottom:85px}
+ .banger-home-refresh .home-products-heading h2{font-size:clamp(49px,11vw,82px)}
+ .banger-home-refresh .home-products-grid{grid-template-columns:1fr;gap:25px}
+ .banger-home-refresh .home-products-grid .menu-product,.banger-home-refresh .home-products-grid .menu-product:nth-child(n){transform:none;grid-template-rows: minmax(250px,65vw) auto;box-shadow:5px 6px 0 #111}
+ .banger-home-refresh .home-products-grid .menu-product:hover{transform:none;box-shadow:5px 6px 0 #111}
+ .banger-sticker-products{right:-10px;top:-44px;width:84px;height:84px;font-size:14px}
+ .banger-home-refresh .home-products-cta{margin-top:43px}
+ .banger-home-refresh .restaurant{padding-top:48px}
+ .banger-spot-stamp{left:auto;right:22px;top:-35px;font-size:15px;padding:9px 13px}
+ .banger-section-eyebrow span:last-child{display:none}
+ .banger-home-refresh .order h2{font-size:clamp(75px,16vw,135px)}
+ .banger-order-star{font-size:155px;right:-38px;top:45px}
+}
+@media(max-width:420px){.banger-home-refresh .concept .section-label{max-width:240px;font-size:10px}.banger-deco-concept{right:12px;top:60px}.banger-home-refresh .home-products-heading h2{font-size:clamp(45px,12vw,58px)}.banger-home-refresh .home-products-grid .menu-product{grid-template-rows:250px auto}}
+@media(prefers-reduced-motion:reduce){.banger-home-refresh .home-products-grid .menu-product{transition:none}}
+
+
+/* BANGER V7.3 — correctif visibilité & cohérence pages 2026-11-23 */
+/* Les cartes se dimensionnent selon le contenu : le texte reste toujours en dessous des images. */
+.banger-home-refresh .home-products-grid .menu-product,
+.banger-menu-refresh .menu-products-grid .menu-product{
+ display:flex !important;flex-direction:column !important;grid-template-rows:none !important;
+ height:auto !important;min-height:0 !important;overflow:hidden !important;
+}
+.banger-home-refresh .home-products-grid .menu-product-image,
+.banger-menu-refresh .menu-products-grid .menu-product-image{
+ flex:0 0 auto !important;aspect-ratio:4/3 !important;height:auto !important;
+ min-height:0 !important;max-height:none !important;position:relative;
+ border-bottom:3px solid #111;overflow:hidden;
+}
+.banger-home-refresh .home-products-grid .menu-product-image img,
+.banger-menu-refresh .menu-products-grid .menu-product-image img{
+ display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;
+}
+.banger-home-refresh .home-products-grid .menu-product-copy,
+.banger-menu-refresh .menu-products-grid .menu-product-copy{
+ flex:1 0 auto !important;position:relative;z-index:1;display:block !important;
+ height:auto !important;min-height:135px !important;padding:24px 22px 30px !important;
+ background:#fff;color:#111;overflow:visible !important;
+}
+.banger-home-refresh .home-products-grid .menu-product-copy h3,
+.banger-menu-refresh .menu-products-grid .menu-product-copy h3{
+ display:block !important;position:static !important;line-height:1.12 !important;
+ margin:0 0 12px !important;font-size:clamp(25px,2.5vw,39px) !important;
+ color:#111 !important;overflow-wrap:break-word;
+}
+.banger-home-refresh .home-products-grid .menu-product-copy p,
+.banger-menu-refresh .menu-products-grid .menu-product-copy p{
+ position:static !important;margin:0 !important;line-height:1.55 !important;
+ color:#252525 !important;font-size:15px !important;
+}
+/* Nouvelle DA sur chacune des pages intérieures, sans supprimer textes, images, formulaires */
+.banger-inner-kicker{display:flex;justify-content:space-between;align-items:center;gap:16px;
+ border-bottom:2px solid currentColor;padding:0 0 14px;margin:0 0 32px;
+ font:900 12px/1.3 Inter,Arial,sans-serif;letter-spacing:1.3px;text-transform:uppercase}
+.banger-inner-stamp{position:absolute;z-index:4;pointer-events:none;display:flex;align-items:center;
+ justify-content:center;text-align:center;background:#f7d504;color:#111;
+ border:3px solid #111;box-shadow:6px 7px 0 #111;transform:rotate(9deg);
+ font:900 21px/1.02 Anton,Impact,sans-serif;letter-spacing:.5px;padding:18px}
+.banger-concept-refresh .concept-hero{position:relative}
+.banger-concept-stamp{right:var(--pad);top:110px;width:122px;height:122px;border-radius:50%;background:#111;color:#f7d504;border:3px dashed #f7d504;box-shadow:0 0 0 5px #111;font-size:18px}
+.banger-concept-refresh .concept-manifesto .banger-inner-kicker{color:#f7d504}
+.banger-concept-refresh .history .banger-inner-kicker{color:#111}
+.banger-concept-refresh .timeline-copy{border-radius:5px;transform:rotate(-.7deg)}
+.banger-concept-refresh .timeline-item:nth-child(even) .timeline-copy{transform:rotate(.8deg)}
+.banger-concept-refresh .next-chapter{background-image:radial-gradient(#11111112 1px,transparent 1px);background-size:22px 22px}
+.banger-menu-refresh .menu-page-hero{position:relative}
+.banger-menu-stamp{top:95px;right:var(--pad);width:116px;height:116px;border-radius:50%;background:#f7d504;font-size:20px}
+.banger-menu-refresh .menu-category{position:relative;overflow:hidden;background-image:radial-gradient(#1111110d 1px,transparent 1px);background-size:22px 22px}
+.banger-menu-refresh .menu-category:nth-of-type(even){background-color:#fff2b8}
+.banger-menu-refresh .menu-category-heading{position:relative;z-index:1;border-bottom:3px solid #111}
+.banger-menu-refresh .menu-category-heading h2{letter-spacing:-.018em}
+.banger-menu-refresh .menu-products-grid{position:relative;z-index:1}
+.banger-menu-refresh .menu-product{border-radius:7px;box-shadow:7px 8px 0 #111}
+.banger-menu-refresh .menu-product:hover{transform:translateY(-5px) rotate(.35deg)}
+.banger-menu-spark{position:absolute;right:4%;top:25px;font:110px/1 Anton,Impact,sans-serif;color:#111;opacity:.07;pointer-events:none}
+.banger-menu-refresh .menu-anchor-clean a{border-radius:8px;transform:rotate(-1deg)}
+.banger-menu-refresh .menu-anchor-clean a:nth-child(even){transform:rotate(1deg)}
+.banger-menu-refresh .menu-anchor-clean a:hover{transform:translateY(-3px) rotate(0deg)}
+.banger-franchise-refresh .franchise-hero{position:relative}
+.banger-franchise-stamp{top:130px;right:var(--pad);width:130px;height:130px;border-radius:50%;font-size:18px}
+.banger-franchise-refresh .franchise-story .banger-inner-kicker{color:#111}
+.banger-franchise-refresh .franchise-journey .banger-inner-kicker{color:#f7d504}
+.banger-franchise-refresh .franchise-advantages article{border-radius:6px;box-shadow:8px 9px 0 #111}
+.banger-franchise-refresh .franchise-advantages article:nth-child(2n){transform:rotate(.6deg)}
+.banger-franchise-refresh .franchise-advantages article:nth-child(2n+1){transform:rotate(-.6deg)}
+.banger-franchise-refresh .franchise-advantages article:hover{transform:translateY(-6px) rotate(0)}
+.banger-franchise-refresh .franchise-form-v2{border:3px solid #111;box-shadow:9px 10px 0 #f7d504;border-radius:9px}
+@media(max-width:900px){
+ .banger-concept-stamp,.banger-menu-stamp,.banger-franchise-stamp{top:91px;right:16px;width:85px;height:85px;font-size:13px;padding:9px}
+ .banger-inner-kicker{font-size:10px;letter-spacing:.5px;margin-bottom:24px}
+ .banger-inner-kicker span{display:none}
+ .banger-franchise-refresh .franchise-advantages article:nth-child(n){transform:none}
+ .banger-menu-refresh .menu-anchor-clean a:nth-child(n){transform:none}
+ .banger-home-refresh .home-products-grid .menu-product-image,
+ .banger-menu-refresh .menu-products-grid .menu-product-image{aspect-ratio:4/3 !important}
+}
+
+
+/* BANGER — Franchise: formulaire ouvert, sans cadre, édition 2026 */
+.banger-franchise-refresh .franchise-application{
+  position:relative;
+  background:#f3efdf;
+  color:#111;
+  padding:clamp(72px,8vw,136px) var(--pad);
+  overflow:hidden;
+}
+.banger-franchise-refresh .franchise-application::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:radial-gradient(rgba(17,17,17,.10) 1px, transparent 1px);
+  background-size:25px 25px;
+  opacity:.38;
+}
+.banger-franchise-refresh .franchise-form-v2{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:minmax(280px,.85fr) minmax(0,1.15fr);
+  gap:clamp(40px,6vw,110px);
+  align-items:start;
+  max-width:1330px;
+  padding:0;
+  margin:0 auto;
+  border:0;
+  box-shadow:none;
+  border-radius:0;
+  background:transparent;
+  color:#111;
+}
+.banger-franchise-refresh .form-heading-full{
+  margin:0;
+  max-width:520px;
+  position:sticky;
+  top:110px;
+}
+.banger-franchise-refresh .form-heading-full .eyebrow{
+  display:inline-block;
+  margin:0 0 26px;
+  padding:9px 14px;
+  background:#f7d504;
+  border:2px solid #111;
+  transform:rotate(-2deg);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1.1px;
+  text-transform:uppercase;
+}
+.banger-franchise-refresh .form-heading-full h2{
+  font-family:Anton,Impact,sans-serif;
+  font-size:clamp(58px,6vw,100px);
+  line-height:.96;
+  letter-spacing:-.02em;
+  margin:0 0 28px;
+  overflow-wrap:normal;
+}
+.banger-franchise-refresh .form-heading-full h2 span{
+  color:#111;
+  text-shadow:none;
+  background:linear-gradient(transparent 62%,#f7d504 62%,#f7d504 94%,transparent 94%);
+}
+.banger-franchise-refresh .form-heading-full>p:last-child{
+  font-size:clamp(16px,1.55vw,19px);
+  line-height:1.65;
+  max-width:440px;
+  margin:0;
+}
+.banger-franchise-refresh .franchise-form-v2 .form-fields{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:18px;
+  row-gap:25px;
+  align-items:start;
+}
+.banger-franchise-refresh .franchise-form-v2 .form-fields label:not(.consent){
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+  color:#111;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1.05px;
+  text-transform:uppercase;
+}
+.banger-franchise-refresh .franchise-form-v2 input:not([type="checkbox"]),
+.banger-franchise-refresh .franchise-form-v2 select,
+.banger-franchise-refresh .franchise-form-v2 textarea{
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:58px;
+  margin:0;
+  padding:16px 18px;
+  border:2px solid #111;
+  border-radius:8px;
+  box-shadow:none;
+  background:#fff;
+  color:#111;
+  font:500 15px/1.4 Inter,Arial,sans-serif;
+  letter-spacing:0;
+  text-transform:none;
+  transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.banger-franchise-refresh .franchise-form-v2 textarea{
+  min-height:152px;
+  resize:vertical;
+}
+.banger-franchise-refresh .franchise-form-v2 input::placeholder,
+.banger-franchise-refresh .franchise-form-v2 textarea::placeholder{color:#767676;opacity:1}
+.banger-franchise-refresh .franchise-form-v2 input:focus-visible,
+.banger-franchise-refresh .franchise-form-v2 textarea:focus-visible,
+.banger-franchise-refresh .franchise-form-v2 select:focus-visible{
+  outline:0;
+  border-color:#111;
+  box-shadow:0 0 0 4px #f7d504;
+}
+.banger-franchise-refresh .franchise-form-v2 .consent{
+  display:flex;
+  flex-direction:row;
+  gap:12px;
+  align-items:flex-start;
+  font-size:13px;
+  letter-spacing:0;
+  text-transform:none;
+  font-weight:600;
+  line-height:1.55;
+  margin-top:4px;
+}
+.banger-franchise-refresh .franchise-form-v2 .consent input{
+  appearance:auto;
+  flex:0 0 auto;
+  width:18px;
+  height:18px;
+  min-height:0;
+  margin:2px 0 0;
+  accent-color:#111;
+  box-shadow:none;
+}
+.banger-franchise-refresh .franchise-form-v2 button[type="submit"]{
+  justify-self:start;
+  width:100%;
+  min-height:66px;
+  margin-top:2px;
+  padding:18px 28px;
+  background:#111;
+  color:#f7d504;
+  border:2px solid #111;
+  border-radius:999px;
+  box-shadow:none;
+  font:900 15px/1.2 Inter,Arial,sans-serif;
+  letter-spacing:.7px;
+  transition:background .2s ease,color .2s ease,transform .2s ease;
+}
+.banger-franchise-refresh .franchise-form-v2 button[type="submit"]:hover{
+  background:#f7d504;
+  color:#111;
+  transform:translateY(-2px);
+}
+.banger-franchise-refresh .franchise-form-v2 .form-status{
+  min-height:1em;
+  margin:0;
+  font-size:14px;
+  line-height:1.5;
+}
+@media(max-width:1000px){
+  .banger-franchise-refresh .franchise-form-v2{
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+  .banger-franchise-refresh .form-heading-full{position:static;max-width:750px}
+  .banger-franchise-refresh .form-heading-full h2{font-size:clamp(58px,10vw,92px)}
+}
+@media(max-width:600px){
+  .banger-franchise-refresh .franchise-application{padding:62px 20px 80px}
+  .banger-franchise-refresh .franchise-form-v2{gap:34px}
+  .banger-franchise-refresh .franchise-form-v2 .form-fields{grid-template-columns:1fr;row-gap:20px}
+  .banger-franchise-refresh .franchise-form-v2 .full{grid-column:1}
+  .banger-franchise-refresh .form-heading-full h2{font-size:clamp(55px,14vw,78px)}
+  .banger-franchise-refresh .form-heading-full>p:last-child{font-size:16px}
+  .banger-franchise-refresh .franchise-form-v2 button[type="submit"]{width:100%}
+}
+
+
+/* BANGER – FOLIE, graphisme maison : jaune/noir, pas de marque concurrente */
+:root{--banger-fun-yellow:#f7d504;--banger-fun-ink:#111}
+.fun-page-strip,.fun-ticker{overflow:hidden;background:#101010;color:#f7d504;border-top:2px solid #f7d504;border-bottom:2px solid #f7d504;position:relative;z-index:1}
+.fun-page-strip{margin-top:78px}
+.fun-page-strip>div,.fun-ticker-track{display:flex;width:max-content;align-items:center;gap:22px;padding:12px 0;white-space:nowrap;animation:fun-drift 34s linear infinite}
+.fun-page-strip span,.fun-ticker span{font:900 clamp(17px,2vw,25px)/1 Anton,Impact,sans-serif;letter-spacing:.07em}
+.fun-page-strip b,.fun-ticker b{font:900 22px/1 Inter,Arial,sans-serif;color:#fff}
+.fun-ticker{background:var(--banger-fun-yellow);color:#111;border-color:#111}
+.fun-ticker b{color:#111}
+.fun-ticker-track{animation-duration:26s}
+@keyframes fun-drift{to{transform:translateX(-50%)}}
+/* Le nouveau visuel de couverture doit rester entier, y compris sur téléphone. */
+.banger-home-refresh .home-banner{margin-top:78px;display:flex;flex-direction:column;align-items:stretch;min-height:0;height:auto;overflow:hidden;background:#f7d504}
+.banger-home-refresh .home-banner>img{position:relative;inset:auto;display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;object-position:center center}
+.banger-home-refresh .home-banner-shade{display:none}
+.banger-home-refresh .home-banner-actions{position:relative;inset:auto;z-index:3;display:flex;justify-content:center;align-items:center;padding:22px 22px 28px;background:#101010;gap:14px}
+.banger-home-refresh .home-banner-actions .pill{box-shadow:4px 4px 0 #fff;border:2px solid #111}
+.banger-home-refresh .home-banner-actions .pill-outline{border-color:#fff;color:#fff;box-shadow:none}
+.fun-hero-stamp{position:absolute;z-index:2;right:4.5%;top:17%;width:clamp(90px,12vw,176px);height:clamp(90px,12vw,176px);background:#f7d504;border:3px solid #111;color:#111;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;transform:rotate(14deg);font:900 clamp(12px,1.65vw,23px)/.98 Anton,Impact,sans-serif;box-shadow:5px 5px 0 #111;pointer-events:none}
+.fun-hero-stamp span{font-size:1.6em}
+.fun-how{background:#f7d504;color:#111;position:relative;overflow:hidden;padding-top:100px;padding-bottom:96px;border-top:4px solid #111;border-bottom:4px solid #111}
+.fun-how:before{content:'✳';position:absolute;right:-2%;top:10px;font-size:clamp(160px,28vw,470px);line-height:1;color:rgba(0,0,0,.065);pointer-events:none;transform:rotate(25deg)}
+.fun-how-intro{position:relative;z-index:1;display:grid;grid-template-columns:1.5fr .6fr;gap:14px 36px;align-items:end;margin-bottom:45px}
+.fun-eyebrow{grid-column:1/-1;justify-self:start;display:inline-flex;padding:10px 16px;background:#111;color:#f7d504;border-radius:100px;letter-spacing:.09em;font-size:12px;font-weight:900}
+.fun-how-intro h2{font:900 clamp(64px,8.2vw,138px)/.91 Anton,Impact,sans-serif;margin:0;letter-spacing:-.03em}
+.fun-how-intro h2 em{font-style:normal;color:#fff;-webkit-text-stroke:2px #111;text-shadow:5px 5px 0 #111}
+.fun-how-intro p{margin:0 0 8px;font-size:clamp(16px,1.5vw,20px);line-height:1.55;font-weight:650;max-width:375px}
+.fun-how-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;position:relative;z-index:1}
+.fun-how-cards article{position:relative;background:#fff;border:3px solid #111;border-radius:18px;min-height:270px;padding:22px 24px 30px;box-shadow:7px 8px 0 #111;transition:transform .22s ease}
+.fun-how-cards article:nth-child(1){transform:rotate(-1.5deg)}
+.fun-how-cards article:nth-child(2){transform:rotate(1deg)}
+.fun-how-cards article:nth-child(3){transform:rotate(-1deg)}
+.fun-how-cards article:hover{transform:translateY(-8px) rotate(0)}
+.fun-how-number{font:900 74px/.9 Anton,Impact,sans-serif;color:#f7d504;-webkit-text-stroke:1.5px #111}
+.fun-how-icon{position:absolute;top:21px;right:20px;font:900 55px/1 Anton,Impact,sans-serif;color:#111}
+.fun-how-cards h3{font:900 clamp(27px,2.7vw,41px)/1 Anton,Impact,sans-serif;letter-spacing:.02em;margin:28px 0 12px}
+.fun-how-cards p{font-size:15px;line-height:1.55;margin:0}
+.fun-how-cta{display:inline-flex;align-items:center;gap:25px;background:#111;color:#f7d504;padding:19px 25px;border-radius:100px;font:900 14px/1.2 Inter,Arial,sans-serif;margin-top:46px;position:relative;z-index:2;transition:transform .2s}
+.fun-how-cta:hover{transform:translateY(-4px)}
+.fun-how-cta span{font-size:24px}
+/* playful but restrained section accent */
+.banger-menu-refresh .menu-category-heading h2{letter-spacing:-.015em}
+.banger-menu-refresh .menu-category-heading .eyebrow{display:inline-flex;justify-self:start;background:#111;color:#f7d504;padding:8px 13px;border-radius:100px;transform:rotate(-1deg)}
+.banger-concept-refresh .concept-manifesto h2{letter-spacing:-.02em}
+.banger-franchise-refresh .franchise-journey .franchise-section-heading h2{letter-spacing:-.02em}
+@media(max-width:900px){
+ .fun-how-intro{grid-template-columns:1fr;gap:20px}.fun-how-intro p{max-width:620px}
+ .fun-how-cards{grid-template-columns:1fr 1fr}.fun-how-cards article:nth-child(3){grid-column:1/-1}
+ .fun-page-strip{margin-top:78px}
+}
+@media(max-width:650px){
+ .banger-home-refresh .home-banner{margin-top:78px;min-height:0;height:auto}
+ .banger-home-refresh .home-banner>img{position:relative;width:100%;height:auto;min-height:0;aspect-ratio:3/2;object-fit:contain}
+ .banger-home-refresh .home-banner-actions{display:flex;flex-direction:row;flex-wrap:wrap;padding:15px 12px 19px;gap:9px}
+ .banger-home-refresh .home-banner-actions .pill{flex:1 1 120px;width:auto;padding:14px 12px;font-size:11px}
+ .fun-hero-stamp{top:18%;right:3%;width:66px;height:66px;border-width:2px;box-shadow:3px 3px 0 #111;font-size:9px}
+ .fun-ticker-track,.fun-page-strip>div{gap:16px;padding:10px 0}
+ .fun-ticker span,.fun-page-strip span{font-size:18px}
+ .fun-how{padding:63px 18px 70px}.fun-how-intro h2{font-size:clamp(54px,12vw,86px)}
+ .fun-how-intro h2 em{-webkit-text-stroke:1px #111;text-shadow:3px 3px 0 #111}
+ .fun-how-cards{grid-template-columns:1fr;gap:18px}.fun-how-cards article{min-height:215px;padding:20px 22px 24px}
+ .fun-how-cards article:nth-child(3){grid-column:auto}
+ .fun-how-cards article:nth-child(n){transform:none}.fun-how-cards article:hover{transform:none}
+ .fun-how-cards h3{margin:20px 0 9px}.fun-how-cta{margin-top:30px}
+}
+@media(prefers-reduced-motion:reduce){.fun-page-strip>div,.fun-ticker-track{animation:none}.fun-how-cards article,.fun-how-cta{transition:none}}
+
+
+/* BANGER V7.3 — réseaux et navigation flottante, novembre 2026 */
+.banger-footer-social{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:11px;min-width:0}
+.banger-footer-social>span{font:800 12px/1.4 Inter,Arial,sans-serif;letter-spacing:.04em;white-space:nowrap}
+.banger-footer-social>span strong{color:#f7d504;letter-spacing:0}
+.site-footer .banger-footer-social>a{width:39px;height:39px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:inline-flex;align-items:center;justify-content:center;background:#f7d504;color:#101010;transition:transform .2s ease,background .2s ease}
+.site-footer .banger-footer-social>a:hover{transform:translateY(-3px);background:#fff;color:#101010}
+.banger-footer-social svg{width:19px;height:19px;display:block}
+.banger-footer-social a span{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.banger-floating-social{position:fixed;top:50%;right:16px;transform:translateY(-50%);z-index:80;display:flex;flex-direction:column;align-items:center;gap:11px}
+.banger-floating-social a{display:flex;align-items:center;justify-content:center;width:49px;height:49px;border:2px solid #f7d504;border-radius:50%;background:#101010;color:#fff;box-shadow:0 5px 15px rgba(0,0,0,.23);transition:transform .2s ease,background .2s ease,color .2s ease}
+.banger-floating-social a:hover,.banger-floating-social a:focus-visible{background:#f7d504;color:#101010;transform:translateX(-4px)}
+.banger-floating-social a.banger-floating-order{background:#f7d504;color:#101010;border-color:#101010}
+.banger-floating-social svg{display:block;width:23px;height:23px}
+@media(max-width:1100px){.banger-footer-social{justify-content:flex-start}.banger-floating-social{right:8px}.banger-floating-social a{width:44px;height:44px}}
+@media(max-width:900px){.banger-floating-social{display:none}}
+@media(max-width:760px){.site-footer .banger-footer-social{display:flex;gap:10px}.banger-footer-social>span{width:100%;font-size:12px}}
+/* Accueil : retrouver l'en-tête transparent posé sur la bannière (desktop). */
+@media(min-width:901px){
+ .banger-home-refresh .site-header{background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+ .banger-home-refresh .site-header .desktop-nav a{color:#101010;text-shadow:0 1px 4px rgba(255,255,255,.55)}
+ .banger-home-refresh .site-header .desktop-nav a:after{background:#101010}
+ .banger-home-refresh .home-banner{margin-top:0!important}
+}
+@media(prefers-reduced-motion:reduce){.site-footer .banger-footer-social>a,.banger-floating-social a{transition:none}}
+/* Réseaux sur une ligne dédiée pour ne pas déséquilibrer le footer à trois colonnes. */
+.site-footer .banger-footer-social{grid-column:1/-1;justify-content:flex-end;gap:12px}
+@media(max-width:760px){.site-footer .banger-footer-social{justify-content:flex-start}}
+
+/* BANGER V6 — Accueil : transparent en haut, fond noir dès le scroll.
+   L'écouteur de scroll existant applique is-scrolled après 24px. */
+@media (min-width: 901px) {
+  .banger-home-refresh .site-header.is-scrolled {
+    background: rgba(16, 16, 16, .97) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .24) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    backdrop-filter: blur(12px) !important;
+  }
+  .banger-home-refresh .site-header.is-scrolled .desktop-nav a {
+    color: #fff !important;
+    text-shadow: none !important;
+  }
+  .banger-home-refresh .site-header.is-scrolled .desktop-nav a::after {
+    background: #f7d504 !important;
+  }
+}

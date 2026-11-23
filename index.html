@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="banger-home-refresh">
   <div class="noise" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand brand-logo" href="index.html" aria-label="Accueil BANGER"><img src="assets/logo-banger.png" alt="BANGER"></a>
@@ -23,17 +23,33 @@
       <a href="franchise.html">Franchise</a>
     </nav>
     <a class="pill pill-small" target="_blank" rel="noreferrer" href="https://www.ubereats.com/fr/store/banger/QmKdcxdpXiG3UM4ic0lPdQ">Commander</a>
-  </header>
+  
+  <button class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="mobile-navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-navigation" aria-label="Navigation mobile" inert>
+    <a href="index.html">Accueil</a>
+    <a href="concept.html">Concept</a>
+    <a href="carte.html">La carte</a>
+    <a href="franchise.html">Franchise</a>
+    <a class="mobile-order-link" href="https://www.ubereats.com/fr/store/banger/QmKdcxdpXiG3UM4ic0lPdQ" target="_blank" rel="noopener noreferrer">Commander</a>
+  </nav>
+</header>
+  <aside class="banger-floating-social" aria-label="Suivre BANGER et commander"><a href="https://www.instagram.com/bangeroriginal/" aria-label="Instagram BANGER" title="Instagram @bangeroriginal" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.8" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@bangeroriginal" aria-label="TikTok BANGER" title="TikTok @bangeroriginal" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 2c.25 2.35 1.57 3.84 4 4.1v3.4a9.3 9.3 0 0 1-4-1.06v6.21c0 4.2-3.05 7.35-7.1 7.35A7.12 7.12 0 0 1 2.5 14.9c0-3.9 3.1-7.1 7.05-7.1.47 0 .94.05 1.42.16v3.53a3.5 3.5 0 0 0-1.42-.3c-2.04 0-3.65 1.63-3.65 3.7 0 2.08 1.6 3.67 3.63 3.67 2 0 3.58-1.52 3.58-3.66V2h3.5Z"/></svg></a><a class="banger-floating-order" href="https://www.ubereats.com/fr/store/banger/QmKdcxdpXiG3UM4ic0lPdQ" aria-label="Commander chez BANGER" title="Commander sur Uber Eats" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14l-1 14H6L5 7Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg></a></aside>
 
   <main>
     <section class="home-banner" aria-label="Les produits BANGER">
-      <img src="assets/hero-banger.png" alt="Riz crousty, gratin et tacos gratiné BANGER">
+      <img src="assets/hero-banger-fun.png" alt="Un client présente un tacos gratiné et un sac BANGER jaune et noir" fetchpriority="high">
       <div class="home-banner-shade"></div>
+      <div class="fun-hero-stamp" aria-hidden="true">FAIT POUR<br>RÉGALER <span>✳</span></div>
       <div class="home-banner-actions reveal">
         <a class="pill" href="carte.html">Voir la carte</a>
         <a class="pill pill-outline" href="#restaurant">Nous trouver</a>
       </div>
     </section>
+
+    <div class="fun-ticker" aria-label="Le gratinage, notre spécialité"><div class="fun-ticker-track" aria-hidden="true"><span>ÇA GRATINE !</span><b>✳</b><span>ÇA CROUSTILLE !</span><b>✳</b><span>ÇA VA ÊTRE BANGER !</span><b>✳</b><span>ÇA GRATINE !</span><b>✳</b><span>ÇA CROUSTILLE !</span><b>✳</b><span>ÇA VA ÊTRE BANGER !</span><b>✳</b><span>ÇA GRATINE !</span><b>✳</b><span>ÇA CROUSTILLE !</span><b>✳</b><span>ÇA VA ÊTRE BANGER !</span><b>✳</b><span>ÇA GRATINE !</span><b>✳</b><span>ÇA CROUSTILLE !</span><b>✳</b><span>ÇA VA ÊTRE BANGER !</span><b>✳</b></div></div>
 
     <div class="brand-marquee" aria-label="Les spécialités BANGER">
       <div class="brand-marquee-track">
@@ -43,10 +59,12 @@
     </div>
 
     <section class="concept section" id="concept">
+      <div class="banger-deco banger-deco-concept" aria-hidden="true">100%<small>GOURMAND</small></div>
       <div class="section-label">Le spécialiste du gratinage</div>
       <div class="concept-grid">
         <h2 class="reveal">NÉ À<br>CHAMBÉRY.<br><span>FAIT POUR</span><br>FRAPPER FORT.</h2>
         <div class="concept-copy reveal delay-1">
+          <div class="banger-side-note" aria-hidden="true">LE GOÛT QUI FAIT DU BRUIT <span>✳</span></div>
           <p>Chez BANGER, on mélange générosité, croustillant et recettes ultra-gourmandes. Tacos gratinés, roulés, riz crousty et gratins : chaque produit est préparé pour marquer dès la première bouchée.</p>
           <a class="text-link dark" href="concept.html">Découvrir notre concept →</a>
         </div>
@@ -55,12 +73,15 @@
 
     <section class="home-products section" id="incontournables">
       <div class="section-label">Nos incontournables</div>
+      <div class="banger-section-eyebrow" aria-hidden="true"><span>01 / LES STARS</span><span>FAIT AVEC DU CARACTÈRE ↗</span></div>
       <header class="home-products-heading reveal">
         
         <h2>NOS<br><span>INCONTOURNABLES.</span></h2>
         <p>Découvrez les créations emblématiques qui font l’identité de BANGER.</p>
       </header>
 
+      <div class="banger-products-wrap">
+        <div class="banger-sticker banger-sticker-products" aria-hidden="true">ÇA<br>GRATINE ! <span>✳</span></div>
       <div class="menu-products-grid home-products-grid">
         <article class="menu-product reveal">
           <div class="menu-product-image"><img src="assets/home-tacos.png" alt="Tacos gratiné BANGER"></div>
@@ -75,11 +96,28 @@
           <div class="menu-product-copy"><h3>Gratin BANGER</h3><p>Une barquette chaude et généreuse, garnie selon la recette et recouverte d’un gratinage fondant.</p></div>
         </article>
       </div>
+      </div>
       <div class="home-products-cta reveal"><a class="pill pill-black" href="carte.html">Accéder à la carte complète →</a></div>
     </section>
 
+    <section class="fun-how section" aria-labelledby="fun-how-title">
+      <div class="fun-how-intro">
+        <span class="fun-eyebrow">LE MODE D’EMPLOI DU KIFF</span>
+        <h2 id="fun-how-title">3 ÉTAPES.<br><em>1 GROS KIFF.</em></h2>
+        <p>Sur place, à emporter ou en livraison : voilà comment profiter de ton prochain BANGER.</p>
+      </div>
+      <div class="fun-how-cards">
+        <article><span class="fun-how-number">01</span><span class="fun-how-icon" aria-hidden="true">↗</span><h3>CHOISIS TON BANGER</h3><p>Repère ton tacos gratiné, ton roulé ou ton riz crousty sur la carte.</p></article>
+        <article><span class="fun-how-number">02</span><span class="fun-how-icon" aria-hidden="true">✳</span><h3>PASSE COMMANDE</h3><p>Retrouve-nous à Chambéry ou commande via notre partenaire de livraison.</p></article>
+        <article><span class="fun-how-number">03</span><span class="fun-how-icon" aria-hidden="true">♥</span><h3>RÉGALE-TOI</h3><p>Place au croustillant, au fondant et surtout au gratinage.</p></article>
+      </div>
+      <a class="fun-how-cta" href="carte.html">DÉCOUVRIR LA CARTE <span aria-hidden="true">↗</span></a>
+    </section>
+
     <section class="restaurant section" id="restaurant">
+      <div class="banger-section-eyebrow banger-on-dark" aria-hidden="true"><span>02 / NOTRE SPOT</span><span>CHAMBÉRY, SAVOIE ✳</span></div>
       <div class="restaurant-panel reveal">
+        <div class="banger-spot-stamp" aria-hidden="true">NÉ À<br>CHAMBÉRY <span>↗</span></div>
         <div class="map-art france-map" aria-label="Carte de France avec BANGER situé à Chambéry">
           <div class="france-availability">BIENTÔT<br><strong>DANS TOUTE LA FRANCE</strong></div>
           <svg class="france-shape" viewBox="0 0 520 560" role="img" aria-labelledby="france-map-title france-map-desc">
@@ -105,6 +143,7 @@
     </section>
 
     <section class="order section" id="commander">
+      <div class="banger-order-star" aria-hidden="true">★</div>
       <h2>UNE FAIM<br>DE BANGER ?</h2>
       <p>Retrouve BANGER sur place, à emporter ou en livraison.</p>
       <div>
@@ -114,7 +153,7 @@
     </section>
   </main>
 
-  <footer class="site-footer"><a class="footer-wordmark" href="index.html" aria-label="Accueil BANGER">BANGER<span>©</span></a><div><a href="concept.html">Concept</a><a href="carte.html">La carte</a><a href="franchise.html">Franchise</a></div><small>BANGER © 2026</small></footer>
+  <footer class="site-footer"><a class="footer-wordmark" href="index.html" aria-label="Accueil BANGER">BANGER<span>©</span></a><div><a href="concept.html">Concept</a><a href="carte.html">La carte</a><a href="franchise.html">Franchise</a></div><small>BANGER © 2026</small><div class="banger-footer-social" aria-label="Réseaux sociaux BANGER"><span>SUIS-NOUS <strong>@bangeroriginal</strong></span><a href="https://www.instagram.com/bangeroriginal/" aria-label="Instagram BANGER : bangeroriginal" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.8" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a><a href="https://www.tiktok.com/@bangeroriginal" aria-label="TikTok BANGER : bangeroriginal" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 2c.25 2.35 1.57 3.84 4 4.1v3.4a9.3 9.3 0 0 1-4-1.06v6.21c0 4.2-3.05 7.35-7.1 7.35A7.12 7.12 0 0 1 2.5 14.9c0-3.9 3.1-7.1 7.05-7.1.47 0 .94.05 1.42.16v3.53a3.5 3.5 0 0 0-1.42-.3c-2.04 0-3.65 1.63-3.65 3.7 0 2.08 1.6 3.67 3.63 3.67 2 0 3.58-1.52 3.58-3.66V2h3.5Z"/></svg><span>TikTok</span></a></div></footer>
   <script src="script.js"></script>
 </body>
 
