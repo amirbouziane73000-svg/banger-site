@@ -23,11 +23,34 @@ steps.forEach((step, index) => step.addEventListener('click', () => {
 
 const franchiseForm = document.querySelector('#franchise-form');
 if (franchiseForm) {
-  franchiseForm.addEventListener('submit', (event) => {
+  franchiseForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const status = document.querySelector('#form-status');
-    status.textContent = 'Candidature prête. Il reste à connecter le formulaire à votre adresse e-mail avant la mise en ligne.';
-    status.classList.add('success');
+    const button = franchiseForm.querySelector('button[type="submit"]');
+    const form = new FormData(franchiseForm);
+    const data = Object.fromEntries(form.entries());
+    status.classList.remove('success');
+    status.textContent = 'Envoi de votre candidature en cours…';
+    button.disabled = true;
+
+    try {
+      const response = await fetch('/api/candidature', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.ok) {
+        throw new Error(result.error || 'Impossible d’envoyer votre candidature pour le moment.');
+      }
+      status.textContent = 'Votre candidature a bien été envoyée. Merci !';
+      status.classList.add('success');
+      franchiseForm.reset();
+    } catch (error) {
+      status.textContent = error.message || 'Une erreur est survenue. Réessayez plus tard.';
+    } finally {
+      button.disabled = false;
+    }
   });
 }
 

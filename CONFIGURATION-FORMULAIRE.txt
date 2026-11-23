@@ -1,0 +1,26 @@
+BANGER V7.3 — FORMULAIRE DE CANDIDATURE FRANCHISE
+
+Le code du formulaire est prêt mais l'envoi d'e-mails ne fonctionnera qu'après configuration.
+
+1. Vérifier votre domaine d'envoi (par ex. bangeroriginal.fr) dans Resend > Domains.
+   Les enregistrements DNS demandés par Resend se configurent chez OVH.
+   Cette étape est distincte de la connexion Vercel du site.
+
+2. Dans Vercel > projet BANGER > Settings > Environment Variables, ajouter :
+   RESEND_API_KEY = votre clé API Resend (secret ; ne jamais la mettre dans GitHub)
+   BANGER_CONTACT_EMAIL = l'adresse à laquelle recevoir les candidatures
+   BANGER_FROM_EMAIL = BANGER <franchise@bangeroriginal.fr>
+   L'adresse d'envoi doit être autorisée dans Resend ; vous pouvez choisir une autre
+   adresse sur le domaine que vous avez vérifié.
+   Cochez Production pour les trois variables.
+
+3. Déployer les fichiers de l'archive sur la branche main GitHub.
+   Vercel détectera la fonction api/candidature.js.
+   Après ajout ou modification des variables, redéployez le projet sur Vercel.
+
+4. Tester https://bangeroriginal.fr/franchise.html avec une vraie candidature
+   et vérifier la boîte de réception, y compris les indésirables.
+   En cas d'erreur, vérifier Vercel > Logs pour /api/candidature.
+
+ATTENTION : aucune clé API ou adresse destinataire n'est incluse dans ce ZIP.
+L'archive est préparée, mais l'envoi n'a pas pu être testé sans configuration Resend.
