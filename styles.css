@@ -1070,3 +1070,205 @@
     background: #f7d504 !important;
   }
 }
+
+/* BANGER V7 — Nouvelle couverture JPG et signature desktop.
+   Conserve les réglages du menu transparent puis noir au scroll. */
+.banger-home-refresh .home-banner>img {
+  aspect-ratio:auto !important;
+  width:100%;
+  height:auto !important;
+  object-fit:contain;
+}
+.home-hero-brand {display:none}
+@media (min-width: 901px) {
+  .banger-home-refresh .home-banner {position:relative}
+  .banger-home-refresh .home-hero-brand {
+    display:flex;
+    position:absolute;
+    right:4.1%;
+    top:16%;
+    width:clamp(205px,21vw,342px);
+    z-index:4;
+    box-sizing:border-box;
+    padding:17px 15px 18px;
+    flex-direction:column;
+    align-items:center;
+    gap:7px;
+    background:rgba(16,16,16,.94);
+    border:2px solid #f7d504;
+    border-radius:16px;
+    box-shadow:7px 9px 0 rgba(0,0,0,.30);
+    transform:rotate(2deg);
+    pointer-events:none;
+  }
+  .banger-home-refresh .home-hero-brand img {
+    display:block;
+    width:100%;
+    height:auto;
+    max-height:125px;
+    object-fit:contain;
+  }
+  .banger-home-refresh .home-hero-brand p {
+    margin:0;
+    text-align:center;
+    color:#fff;
+    font:900 clamp(17px,2vw,27px)/1.07 Anton,Impact,sans-serif;
+    letter-spacing:.06em;
+    text-shadow:1px 2px 0 #000;
+  }
+}
+@media (min-width:901px) and (max-width:1199px) {
+  .banger-home-refresh .home-hero-brand {right:2%;top:13%;width:210px;padding:10px 13px}
+  .banger-home-refresh .home-hero-brand p {font-size:18px}
+}
+@media (max-width:900px) {
+  .banger-home-refresh .home-hero-brand {display:none !important}
+}
+
+/* V8 — Bloc signature bas gauche façon éditorial, sans encadré opaque. */
+@media (min-width: 901px) {
+  .banger-home-refresh .home-hero-brand {
+    display:flex !important;
+    top:auto !important;
+    bottom:17% !important;
+    left:5.2% !important;
+    right:auto !important;
+    width:clamp(250px,27vw,440px) !important;
+    max-width:37% !important;
+    padding:0 !important;
+    gap:10px !important;
+    background:transparent !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    transform:none !important;
+    align-items:flex-start !important;
+    text-align:left !important;
+    filter:drop-shadow(0 4px 10px rgba(0,0,0,.35));
+  }
+  .banger-home-refresh .home-hero-brand img {
+    width:min(100%,380px) !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    object-position:left center !important;
+  }
+  .banger-home-refresh .home-hero-brand p {
+    color:#fff !important;
+    text-align:left !important;
+    font-family:Anton,Impact,sans-serif !important;
+    font-size:clamp(24px,3.3vw,54px) !important;
+    line-height:1.04 !important;
+    letter-spacing:.01em !important;
+    text-shadow:3px 4px 0 #101010,0 6px 18px rgba(0,0,0,.65) !important;
+    padding-left:8px;
+  }
+}
+@media (min-width:901px) and (max-width:1199px) {
+  .banger-home-refresh .home-hero-brand{bottom:15% !important;width:clamp(230px,29vw,335px) !important}
+  .banger-home-refresh .home-hero-brand p{font-size:clamp(21px,3vw,34px) !important}
+}
+
+
+/* V9 — Bannière d'accueil contenue dans un écran sur ordinateur.
+   La photo reste entièrement visible, sans grossissement ni recadrage. */
+@media (min-width:901px) {
+  .banger-home-refresh .home-banner {
+    height:100svh !important;
+    min-height:580px !important;
+    max-height:100svh !important;
+    margin-top:0 !important;
+    position:relative !important;
+    display:block !important;
+    overflow:hidden !important;
+    background:#f9bd12 !important;
+  }
+  .banger-home-refresh .home-banner>img {
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    max-height:100% !important;
+    aspect-ratio:auto !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+  }
+  .banger-home-refresh .home-hero-brand {
+    bottom:16% !important;
+    left:3.5% !important;
+    width:clamp(205px,23vw,345px) !important;
+    max-width:27% !important;
+  }
+  .banger-home-refresh .home-hero-brand img {max-width:310px !important}
+  .banger-home-refresh .home-hero-brand p {font-size:clamp(20px,2.5vw,38px) !important}
+  .banger-home-refresh .home-banner-actions {
+    position:absolute !important;
+    left:auto !important;
+    right:4% !important;
+    bottom:4.5% !important;
+    z-index:5 !important;
+    padding:0 !important;
+    background:transparent !important;
+    justify-content:flex-end !important;
+    flex-wrap:wrap !important;
+  }
+  .banger-home-refresh .home-banner-actions .pill {box-shadow:0 4px 15px rgba(0,0,0,.25) !important}
+}
+/* Les petits écrans conservent la bannière responsive existante. */
+
+/* V10 — On garde 100 % de la largeur de la photo : recadrage vertical uniquement. */
+@media (min-width:901px) {
+  .banger-home-refresh .home-banner > img {
+    position:absolute !important;
+    inset:auto auto auto 0 !important;
+    top:50% !important;
+    transform:translateY(-50%) !important;
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    max-width:none !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    object-fit:initial !important;
+  }
+}
+
+
+/* V11 — Page LA CARTE : la photo commence sous le menu transparent. */
+.banger-menu-refresh .inner-page {
+  padding-top: 0;
+}
+.banger-menu-refresh .site-header {
+  background: transparent;
+  box-shadow: none;
+}
+.banger-menu-refresh .site-header.is-scrolled {
+  background: rgba(16, 16, 16, .97);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .24);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+.banger-menu-refresh .menu-page-hero {
+  min-height: calc(68vh + 76px);
+}
+
+/* V11 — Franchise : le fond noir prend bien le dessus après défilement. */
+.franchise-page .site-header.is-scrolled {
+  background: rgba(16, 16, 16, .97);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .24);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* On préserve le panneau hamburger mobile et son contraste. */
+@media (max-width: 900px) {
+  .banger-menu-refresh .site-header,
+  .franchise-page .site-header {
+    background: rgba(16, 16, 16, .8);
+  }
+  .banger-menu-refresh .site-header.is-scrolled,
+  .franchise-page .site-header.is-scrolled {
+    background: rgba(16, 16, 16, .97);
+  }
+}
